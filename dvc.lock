@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data/data_ingestion.py
+    deps:
+    - path: data/base-file/mumbai.csv
+      hash: md5
+      md5: 82235688fad43ba0f232a32609c4d694
+      size: 3208957
+    - path: src/data/data_ingestion.py
+      hash: md5
+      md5: 479293c00750fbcd06a2ad4a833f6ef4
+      size: 8071
+    params:
+      params.yaml:
+        data_ingestion.random_state: 42
+        data_ingestion.test_size: 0.2
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 090c544b383bfda89d3c2f223f5c69c3.dir
+      size: 600660
+      nfiles: 4

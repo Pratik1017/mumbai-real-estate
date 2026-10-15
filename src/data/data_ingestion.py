@@ -232,6 +232,9 @@ def drop_null(df: pd.DataFrame) -> pd.DataFrame | None:
 
 def split( df: pd.DataFrame ) -> tuple[ pd.DataFrame, pd.DataFrame, pd.Series, pd.Series] | None:
     try:
+
+        df["price"] = df["price"] / 10000000
+        
         X = df.drop(columns=["price"])
         y = df["price"]
 
