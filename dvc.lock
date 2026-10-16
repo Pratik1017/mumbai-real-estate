@@ -147,8 +147,8 @@ stages:
       size: 26137
     - path: src/models/final_model.py
       hash: md5
-      md5: c9633f839d2eb7ac3797e983a499294e
-      size: 3598
+      md5: c7ce3415089a116c529b5ffea39dd1c2
+      size: 3702
     params:
       params.yaml:
         final_model.max_depth: 21
@@ -159,5 +159,5 @@ stages:
     outs:
     - path: model.pkl
       hash: md5
-      md5: 063b7cb2a68d0ebbfc06f3b36624dcac
-      size: 4911894
+      md5: bfad0ec985459d3e9c1dc28be2407c62
+      size: 4965894

@@ -94,7 +94,9 @@ def predict(X_train, X_test, y_train, y_test, pipe):
             # Log trained pipeline
             mlflow.sklearn.log_model(
                 sk_model=pipe,
-                name="random_forest_pipeline"
+                name="random_forest_pipeline",
+                registered_model_name="Random_Forest",
+                serialization_format="pickle"
             )
 
             print("Metrics:", metrics)
