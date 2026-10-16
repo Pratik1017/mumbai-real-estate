@@ -104,7 +104,10 @@ def export_X_train(X_train: pd.DataFrame) -> pd.DataFrame | None:
         path_link = os.path.join("data","interim")
         os.makedirs(path_link , exist_ok=True)
 
-        X_train = X_train.to_csv(os.path.join(path_link, "X_train_cleaned.csv"), index=False)
+        X_train.to_csv(
+            os.path.join(path_link, "X_train_cleaned.csv"),
+            index=False
+        )
         return X_train
 
     except Exception as e:
@@ -120,7 +123,10 @@ def export_X_test(X_test: pd.DataFrame) -> pd.DataFrame | None:
         path_link = os.path.join("data","interim")
         os.makedirs(path_link , exist_ok=True)
 
-        X_test = X_test.to_csv(os.path.join(path_link, "X_test_cleaned.csv"), index=False)
+        X_test.to_csv(
+                    os.path.join(path_link, "X_test_cleaned.csv"),
+                    index=False
+                )
         return X_test
 
     except Exception as e:
