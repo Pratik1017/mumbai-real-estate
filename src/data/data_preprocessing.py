@@ -145,17 +145,17 @@ if __name__ == "__main__":
        X_train = change_dtype(X_train)
        X_test = change_dtype(X_test)
 
-       if X_train and X_test is not None:
+       if X_train is not None and X_test is not None:
         
         X_train = under_cons(X_train)
         X_test = under_cons(X_test)
 
-        if X_train and X_test is not None:
+        if X_train is not None and X_test is not None:
 
            X_train = missing_impute(X_train)
            X_test = missing_impute(X_test)
 
-           if X_train and X_test is not None:
+           if X_train is not None and X_test is not None:
 
               X_train = export_X_train(X_train)
               X_test = export_X_test(X_test)
