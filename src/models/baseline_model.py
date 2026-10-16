@@ -113,4 +113,4 @@ if __name__ == "__main__":
 
     pipe = create_pipe()
 
-    predict(X_train, X_test , y_train , y_test)
+    predict(X_train, X_test , y_train , y_test, pipe )
