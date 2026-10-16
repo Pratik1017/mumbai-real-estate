@@ -29,3 +29,16 @@ stages:
     outs:
     - data/interim/X_test_cleaned_v2.csv
     - data/interim/X_train_cleaned_v2.csv
+  baseline_model:
+    cmd: python python -m src.models.baseline_model
+    deps:
+    - data/interim/X_test_cleaned_v2.csv
+    - data/interim/X_train_cleaned_v2.csv
+    - data/raw/y_test.csv
+    - data/raw/y_train.csv
+    - src/models/baseline_model.py
+    params:
+    - baseline_model.learning_rate
+    - baseline_model.max_depth
+    - baseline_model.random_state
+    - baseline_model.subsample
