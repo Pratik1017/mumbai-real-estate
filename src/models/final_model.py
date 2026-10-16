@@ -3,6 +3,7 @@ import pandas as pd
 import optuna
 import mlflow
 import numpy as np
+import pickle
 
 from sklearn.model_selection import cross_val_score
 from sklearn.preprocessing import StandardScaler
@@ -40,11 +41,11 @@ def create_pipe():
                   ("trf1",create_trf()),
                   ("scaler",StandardScaler()),
                   ('model' ,RandomForestRegressor(
-                        n_estimators= 109,
-                        max_depth= 21,
-                        min_samples_split= 13,
-                        min_samples_leaf= 3,
-                        max_features= "sqrt"
+                        n_estimators= n_estimators,
+                        max_depth= max_depth,
+                        min_samples_split= min_samples_split,
+                        min_samples_leaf= min_samples_leaf,
+                        max_features= max_features
                   ))
              ]
         )
@@ -58,7 +59,7 @@ def create_pipe():
 
 def predict(X_train, X_test, y_train, y_test, pipe):
     try:
-        with mlflow.start_run(run_name="XGBoost_Baseline"):
+        with mlflow.start_run(run_name="Final_Model_Tracking"):
 
             # Log model parameters
             model = pipe.named_steps["model"]
@@ -102,7 +103,7 @@ def predict(X_train, X_test, y_train, y_test, pipe):
 
             print("Metrics:", metrics)
 
-            return metrics
+            return pipe
 
     except Exception as e:
         print(f"Error during model training: {e}")
@@ -121,3 +122,6 @@ if __name__ == "__main__":
     pipe = create_pipe()
 
     predict(X_train, X_test , y_train , y_test, pipe)
+
+    with open("model.pkl" , "wb") as f:
+        pickle.dump(pipe,f)
