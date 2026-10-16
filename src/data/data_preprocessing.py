@@ -61,6 +61,14 @@ def missing_impute(df: pd.DataFrame) -> pd.DataFrame | None:
             "bedrooms",
             "bathrooms"
         ]
+
+        status_map = {
+            "Unfurnished": 0,
+            "Semi-Furnished": 1,
+            "Furnished": 2
+        }
+
+        df["furnished_status"] = df["furnished_status"].replace(status_map)
     
         # Separate known and missing values
         train_df = df[df["furnished_status"].notna()].copy()
