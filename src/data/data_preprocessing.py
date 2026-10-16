@@ -57,7 +57,6 @@ def missing_impute(df: pd.DataFrame) -> pd.DataFrame | None:
 
         # Features used for prediction
         features = [
-            "price",
             "area",
             "bedrooms",
             "bathrooms"
