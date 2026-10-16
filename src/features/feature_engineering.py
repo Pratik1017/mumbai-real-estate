@@ -44,7 +44,7 @@ def create_trf():
 def export_X_train(X_train: pd.DataFrame) -> pd.DataFrame | None:
     try:
 
-        path_link = os.path.join("data","interim")
+        path_link = os.path.join("data","processed")
         os.makedirs(path_link , exist_ok=True)
 
         X_train.to_csv(
@@ -63,7 +63,7 @@ def export_X_train(X_train: pd.DataFrame) -> pd.DataFrame | None:
 def export_X_test(X_test: pd.DataFrame) -> pd.DataFrame | None:
     try:
         
-        path_link = os.path.join("data","interim")
+        path_link = os.path.join("data","processed")
         os.makedirs(path_link , exist_ok=True)
 
         X_test.to_csv(

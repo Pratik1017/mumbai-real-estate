@@ -66,25 +66,25 @@ stages:
       size: 342933
     - path: src/features/feature_engineering.py
       hash: md5
-      md5: 28f1b0d80a98487e2379cb10258f4a3b
-      size: 2451
+      md5: be45c327394ff2058b2d48ea3eb3db17
+      size: 2455
     outs:
-    - path: data/interim/X_test_cleaned_v2.csv
+    - path: data/processed/X_test_cleaned_v2.csv
       hash: md5
       md5: 7866e4c657cea7b2fe40f5449b6ddb0c
       size: 66368
-    - path: data/interim/X_train_cleaned_v2.csv
+    - path: data/processed/X_train_cleaned_v2.csv
       hash: md5
       md5: ea140004cff2e11eb884d7e30fe7fc77
       size: 265148
   baseline_model:
     cmd: python -m src.models.baseline_model
     deps:
-    - path: data/interim/X_test_cleaned_v2.csv
+    - path: data/processed/X_test_cleaned_v2.csv
       hash: md5
       md5: 7866e4c657cea7b2fe40f5449b6ddb0c
       size: 66368
-    - path: data/interim/X_train_cleaned_v2.csv
+    - path: data/processed/X_train_cleaned_v2.csv
       hash: md5
       md5: ea140004cff2e11eb884d7e30fe7fc77
       size: 265148
@@ -98,8 +98,8 @@ stages:
       size: 26137
     - path: src/models/baseline_model.py
       hash: md5
-      md5: 1a68f5451dd4e5c6d392bdb3698ef9e9
-      size: 3432
+      md5: e326261c067ac6ae66c6d7ddd412cb68
+      size: 3436
     params:
       params.yaml:
         baseline_model.learning_rate: 0.05

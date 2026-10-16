@@ -106,8 +106,8 @@ def predict(X_train, X_test, y_train, y_test, pipe):
 if __name__ == "__main__":
 
     # Data Loading
-    X_train = pd.read_csv("data/interim/X_train_cleaned_v2.csv")
-    X_test = pd.read_csv("data/interim/X_test_cleaned_v2.csv")
+    X_train = pd.read_csv("data/processed/X_train_cleaned_v2.csv")
+    X_test = pd.read_csv("data/processed/X_test_cleaned_v2.csv")
     y_train = pd.read_csv("data/raw/y_train.csv")
     y_test = pd.read_csv("data/raw/y_test.csv")
 
