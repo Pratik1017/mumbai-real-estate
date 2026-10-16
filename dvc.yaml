@@ -42,3 +42,11 @@ stages:
     - baseline_model.max_depth
     - baseline_model.random_state
     - baseline_model.subsample
+  multi_model_hp:
+    cmd: python -m src.models.multi_model_hp
+    deps:
+    - data/processed/X_train_cleaned_v2.csv
+    - data/raw/y_train.csv
+    - src/models/multi_model_hp.py
+    metrics:
+    - best_params.json

@@ -106,3 +106,23 @@ stages:
         baseline_model.max_depth: 6
         baseline_model.random_state: 42
         baseline_model.subsample: 0.8
+  multi_model_hp:
+    cmd: python -m src.models.multi_model_hp
+    deps:
+    - path: data/processed/X_train_cleaned_v2.csv
+      hash: md5
+      md5: ea140004cff2e11eb884d7e30fe7fc77
+      size: 265148
+    - path: data/raw/y_train.csv
+      hash: md5
+      md5: 57a362e9d55d7dd06bf357f1d9a48235
+      size: 26137
+    - path: src/models/multi_model_hp.py
+      hash: md5
+      md5: dc38f70a9a1214356b0f67961ea6487d
+      size: 4660
+    outs:
+    - path: best_params.json
+      hash: md5
+      md5: 3cab97115992db0152efc7ca55dfe5af
+      size: 194
