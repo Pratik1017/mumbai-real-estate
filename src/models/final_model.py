@@ -74,7 +74,7 @@ def predict(X_train, X_test, y_train, y_test, pipe):
             })
 
             # Train model
-            pipe.fit(X_train, np.log1p(y_train))
+            pipe.fit(X_train, y_train)
 
             # Predictions
             y_train_pred = pipe.predict(X_train)
@@ -82,14 +82,10 @@ def predict(X_train, X_test, y_train, y_test, pipe):
 
             # Metrics
             metrics = {
-                "train_r2": r2_score(y_train, np.expm1(y_train_pred)),
-                "test_r2": r2_score(y_test, np.expm1(y_test_pred)),
+                "train_r2": r2_score(y_train, y_train_pred),
+                "test_r2": r2_score(y_test, y_test_pred),
                 "test_mae": mean_absolute_error(
-                    y_test, np.expm1(y_test_pred)
-                ),
-                "test_rmse": np.sqrt(
-                    mean_squared_error(y_test, np.expm1(y_test_pred))
-                )
+                    y_test, y_test_pred ),
             }
 
             # Log metrics

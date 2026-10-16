@@ -51,10 +51,18 @@ stages:
     metrics:
     - best_params.json
   final_model:
-    cmd: .py -d data/processed/X_train_cleaned_v2.csv -d 
-      data/processed/X_test_cleaned_v2.csv -d data/raw/y_train.csv -d 
-      data/raw/y_test.csv -p final_model.n_estimators -p final_model.max_depth 
-      -p final_model.min_samples_split -p final_model.min_samples_leaf -p 
-      final_model.max_features -o model.pkl python -m src.models.final_model
+    cmd: python -m src.models.final_model
     deps:
-    - src/models/final_model
+    - data/processed/X_test_cleaned_v2.csv
+    - data/processed/X_train_cleaned_v2.csv
+    - data/raw/y_test.csv
+    - data/raw/y_train.csv
+    - src/models/final_model.py
+    params:
+    - final_model.max_depth
+    - final_model.max_features
+    - final_model.min_samples_leaf
+    - final_model.min_samples_split
+    - final_model.n_estimators
+    outs:
+    - model.pkl

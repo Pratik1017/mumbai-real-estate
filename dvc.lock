@@ -126,3 +126,38 @@ stages:
       hash: md5
       md5: 3cab97115992db0152efc7ca55dfe5af
       size: 194
+  final_model:
+    cmd: python -m src.models.final_model
+    deps:
+    - path: data/processed/X_test_cleaned_v2.csv
+      hash: md5
+      md5: 7866e4c657cea7b2fe40f5449b6ddb0c
+      size: 66368
+    - path: data/processed/X_train_cleaned_v2.csv
+      hash: md5
+      md5: ea140004cff2e11eb884d7e30fe7fc77
+      size: 265148
+    - path: data/raw/y_test.csv
+      hash: md5
+      md5: 3e72666320c1a7f9dce1772db1d60fc8
+      size: 6570
+    - path: data/raw/y_train.csv
+      hash: md5
+      md5: 57a362e9d55d7dd06bf357f1d9a48235
+      size: 26137
+    - path: src/models/final_model.py
+      hash: md5
+      md5: c9633f839d2eb7ac3797e983a499294e
+      size: 3598
+    params:
+      params.yaml:
+        final_model.max_depth: 21
+        final_model.max_features: sqrt
+        final_model.min_samples_leaf: 3
+        final_model.min_samples_split: 13
+        final_model.n_estimators: 109
+    outs:
+    - path: model.pkl
+      hash: md5
+      md5: 063b7cb2a68d0ebbfc06f3b36624dcac
+      size: 4911894
