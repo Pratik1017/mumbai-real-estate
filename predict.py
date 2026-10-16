@@ -5,14 +5,14 @@ with open("model.pkl" , "rb") as f:
     model = pickle.load(f)
 
 user_req = {
-    "area": 1200,
+    "area": 1000,
     "bedrooms": 2,
-    "bathrooms": 2,
+    "bathrooms": 1,
     "status": "Ready to Move",
-    "neworold": "Resale",
-    "furnished_status": 1,
+    "neworold": "New Property",
+    "furnished_status": 0,
     "type_of_building": "Flat",
-    "category": "West Mumbai"
+    "category": "South Mumbai"
 }
 
 
