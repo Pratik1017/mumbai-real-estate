@@ -24,18 +24,34 @@ stages:
   data_preprocessing:
     cmd: python src/data/data_preprocessing.py
     deps:
-    - path: data/raw
+    - path: data/raw/X_test.csv
       hash: md5
-      md5: 090c544b383bfda89d3c2f223f5c69c3.dir
-      size: 600660
-      nfiles: 4
+      md5: 4982a48ad48d989be679ef8b31a34259
+      size: 113881
+    - path: data/raw/X_train.csv
+      hash: md5
+      md5: b512e40a639e97398327e795ce1e363a
+      size: 454072
+    - path: data/raw/y_test.csv
+      hash: md5
+      md5: 3e72666320c1a7f9dce1772db1d60fc8
+      size: 6570
+    - path: data/raw/y_train.csv
+      hash: md5
+      md5: 57a362e9d55d7dd06bf357f1d9a48235
+      size: 26137
     - path: src/data/data_preprocessing.py
       hash: md5
       md5: fb737a416dcbd884c450ae87efac0932
       size: 4444
     outs:
-    - path: data/interim
+    - path: data/interim/X_test_cleaned.csv
       hash: md5
-      md5: c701035ca04c9f192deaaf753c08e766.dir
-      size: 428918
-      nfiles: 2
+      md5: 33b5669370d3d49262d9128bd1045209
+      size: 85985
+    - path: data/interim/X_train_cleaned.csv
+      hash: md5
+      md5: e46376c6f9f9234e751ef0b784b99af7
+      size: 342933
+  feature_engineering:
+    cmd: ^

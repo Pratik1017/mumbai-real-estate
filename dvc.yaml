@@ -12,7 +12,13 @@ stages:
   data_preprocessing:
     cmd: python src/data/data_preprocessing.py
     deps:
-    - data/raw
+    - data/raw/X_test.csv
+    - data/raw/X_train.csv
+    - data/raw/y_test.csv
+    - data/raw/y_train.csv
     - src/data/data_preprocessing.py
     outs:
-    - data/interim
+    - data/interim/X_test_cleaned.csv
+    - data/interim/X_train_cleaned.csv
+  feature_engineering:
+    cmd: ^
