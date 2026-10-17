@@ -5,9 +5,9 @@ with open("model.pkl" , "rb") as f:
     model = pickle.load(f)
 
 user_req = {
-    "area": 1000,
-    "bedrooms": 2,
-    "bathrooms": 1,
+    "area": 100,
+    "bedrooms": 1,
+    "bathrooms": 0,
     "status": "Ready to Move",
     "neworold": "New Property",
     "furnished_status": 0,
