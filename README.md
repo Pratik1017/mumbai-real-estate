@@ -1,7 +1,3 @@
-from pathlib import Path
-
-readme = r'''<div align="center">
-
 # 🏙️ Mumbai Real Estate Price Prediction & Recommendation
 
 ### An end-to-end Machine Learning and MLOps project
