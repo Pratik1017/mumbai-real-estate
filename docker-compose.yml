@@ -1,0 +1,19 @@
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    container_name: mumbai-real-estate-api
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    container_name: mumbai-real-estate-streamlit
+    depends_on:
+      - api
