@@ -734,7 +734,3 @@ If you find this project useful, consider giving the repository a ⭐.
 
 </div>
 '''
-
-path = Path("/mnt/data/README.md")
-path.write_text(readme, encoding="utf-8")
-print(f"Created {path} ({len(readme.splitlines())} lines)")
