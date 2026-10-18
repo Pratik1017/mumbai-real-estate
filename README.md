@@ -10,14 +10,19 @@ Predict estimated property prices, explore Mumbai real-estate data, and discover
 
 <br/>
 
+
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-UI-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![DVC](https://img.shields.io/badge/DVC-Pipeline-945DD6?logo=dvc&logoColor=white)](https://dvc.org/)
 [![MLflow](https://img.shields.io/badge/MLflow-Experiment%20Tracking-0194E2?logo=mlflow&logoColor=white)](https://mlflow.org/)
+[![Optuna](https://img.shields.io/badge/Optuna-Hyperparameter%20Tuning-7B68EE?logo=optuna&logoColor=white)](https://optuna.org/)
+[![DagsHub](https://img.shields.io/badge/DagsHub-Experiment%20Tracking-222222?logo=dagshub&logoColor=white)](https://dagshub.com/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
 [![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![AWS EC2](https://img.shields.io/badge/AWS-EC2-232F3E?logo=amazonaws&logoColor=white)](https://aws.amazon.com/ec2/)
+
 
 **Repository:** [Pratik1017/mumbai-real-estate](https://github.com/Pratik1017/mumbai-real-estate)
 
